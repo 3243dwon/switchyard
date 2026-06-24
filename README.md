@@ -80,10 +80,23 @@ See [`spec/dilemma-spec.md`](spec/dilemma-spec.md) for the full format and [`DES
 
 All ten ship as fixtures in [`src/canon.ts`](src/canon.ts) — the proof that the primitives regenerate what philosophers actually argue over: `switch`, `footbridge`, `loop`, `fat-villain`, `yard`, `consenting`, `transplant`, `tunnel` (probabilistic), `triage` (partition), `alignment` (an agent's directive).
 
+## Visual styles
+
+`renderDiorama(d, { style })` emits the same dilemma in any of four visual languages — each a pure function of the spec, so the count drives the crowd/ink-weight, the derived causation drives the "used as a means" stamp, and the mechanism picks a push gesture vs. a diverting fork.
+
+```ts
+renderDiorama(d, { style: "risograph" });  // constructivist agitprop poster (the flagship)
+renderDiorama(d, { style: "inkwash" });    // 水墨 — ink weight encodes the death toll
+renderDiorama(d, { style: "animated" });   // SMIL loop: the trolley rolls, the tally ticks
+renderDiorama(d, { style: "editorial" });  // the clean rail schematic (default)
+```
+
+`node examples/demo.ts` renders the whole canon in every style to `out/styles/`. Because each style reads the spec rather than a fixed scene, a footbridge (`means`) and a switch (`side_effect`) come out visibly different — and seed 9,999 new dilemmas, get 9,999 coherent posters.
+
 ## Roadmap
 
-- **Five Hands** — a renderer plugin where each ethical framework draws the *same* dilemma its own way (utilitarian sizes by headcount, deontology draws inviolable boundaries). Consumes this spec.
-- **Daily diorama** — a scheduled action that commits one fresh dilemma a day; the gallery is the storefront.
+- **Daily diorama** — a scheduled action that commits one fresh risograph/ink-wash dilemma a day; the auto-growing gallery is the storefront.
+- **Five Hands** — a renderer where each ethical framework draws the *same* dilemma its own way (utilitarian sizes by headcount, deontology draws inviolable boundaries). Consumes this spec.
 - **`@switchyard/py`** — a Python port of the spec + scorers, for the eval crowd.
 - **Consistency fuzzer** — because every scenario is a *parametric program*, dial one variable and re-run to find where a model's moral verdict silently flips. (The one benchmark wedge the labs haven't taken.)
 
