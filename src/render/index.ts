@@ -33,3 +33,5 @@ export function renderDiorama(d: Dilemma, opts: RenderOptions = {}): string {
 }
 
 export { renderEditorial, renderRisograph, renderInkwash, renderAnimated };
+export { animePrompt } from "./anime-prompt.ts";
+export type { AnimePrompt } from "./anime-prompt.ts";

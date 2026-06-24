@@ -11,8 +11,8 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 import {
-  CANON, asValid, scoreAll, isContested, generate, renderDiorama, RENDER_STYLES,
-  deriveCausation, harmedParties, expectedDeaths, theSwitch, footbridge, loop, transplant,
+  CANON, asValid, scoreAll, isContested, generate, renderDiorama, RENDER_STYLES, animePrompt,
+  deriveCausation, harmedParties, expectedDeaths, theSwitch, footbridge, loop, transplant, alignment,
 } from "../src/index.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -74,7 +74,15 @@ for (const seed of [42, 256]) {
 writeFileSync(join(root, "examples", "footbridge.spec.json"), JSON.stringify(footbridge, null, 2));
 
 console.log(`\n  Styles: ${RENDER_STYLES.join(", ")}`);
-console.log(`  Wrote ${wrote} dioramas → ./out/styles/<id>.<style>.svg  and  examples/footbridge.spec.json\n`);
+console.log(`  Wrote ${wrote} dioramas → ./out/styles/<id>.<style>.svg  and  examples/footbridge.spec.json`);
+
+// the anime "renderer" emits a prompt, not an SVG — domain swaps the apparatus + setting
+console.log("\n  Anime hero-art prompts (Shinkai · Tanaka house style → paste into NijiJourney 6):");
+for (const raw of [footbridge, transplant, alignment]) {
+  const d = asValid(raw);
+  console.log(`\n  ── ${d.id} · domain:${d.domain} ──\n  ${animePrompt(d).niji}`);
+}
+console.log();
 
 function labelOf(d: typeof theSwitch, choiceId: string): string {
   const c = d.choices.find((x) => x.id === choiceId)!;
