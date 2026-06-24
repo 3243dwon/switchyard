@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 import {
-  generate, asValid, renderDiorama, RENDER_STYLES,
+  generate, asValid, renderDiorama, RENDER_STYLES, animePrompt,
   scoreAll, harmedParties, deriveCausation, expectedDeaths,
 } from "../src/index.ts";
 
@@ -29,6 +29,9 @@ const d = asValid(generate(seed));
 for (const style of RENDER_STYLES) {
   writeFileSync(join(dir, `${date}.${style}.svg`), renderDiorama(d, { style }));
 }
+// the hero-art prompt for this day's dilemma (paste into NijiJourney 6)
+const hero = animePrompt(d);
+writeFileSync(join(dir, `${date}.prompt.txt`), `${hero.niji}\n\nNEGATIVE: ${hero.negative}\n`);
 
 const act = d.choices.find((c) => c.mechanism !== "omission")!;
 const victim = harmedParties(d, act)[0];
@@ -50,7 +53,7 @@ const rows = index
 
 <img src="${e.date}.risograph.svg" width="420" alt="${e.title}, risograph"> <img src="${e.date}.inkwash.svg" width="280" alt="${e.title}, ink wash">
 
-\`${e.mechanism}\` · \`${e.causation}\` · **${e.split}** · E[deaths]=${e.ed} — also [editorial](${e.date}.editorial.svg) · [animated](${e.date}.animated.svg) · \`node scripts/gallery.ts ${e.date}\``,
+\`${e.mechanism}\` · \`${e.causation}\` · **${e.split}** · E[deaths]=${e.ed} — also [editorial](${e.date}.editorial.svg) · [animated](${e.date}.animated.svg) · [hero prompt](${e.date}.prompt.txt) · \`node scripts/gallery.ts ${e.date}\``,
   )
   .join("\n\n---\n\n");
 
