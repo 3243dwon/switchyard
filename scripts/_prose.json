@@ -1,0 +1,242 @@
+[
+  {
+    "id": "switch",
+    "eyebrow": "I · THE SWITCH",
+    "kind": "side_effect",
+    "mood": "warm",
+    "situationLines": [
+      "The morning light comes in low and gold over the rails, and you are the only one who hears the trolley coming.",
+      "Down the main line, five backs bent to their work, sleeves rolled, a radio playing somewhere none of them can hear.",
+      "Your hand rests on the lever, and the spur curves off to where one man stands alone, looking the other way."
+    ],
+    "stakes": "five strangers at their work · one man who never turns around",
+    "choices": [
+      {
+        "id": "stay",
+        "label": "keep your hands at your sides",
+        "consequence": "The trolley stays its course and the five on the main line go under it.",
+        "lingers": false,
+        "voices": {
+          "count": "Four more than one went still on the rail this morning, and the larger number is the one you let fall.",
+          "faith": "You bent no rail toward anyone, and your palms are cool and empty while five sets of lungs go quiet.",
+          "tend": "Five radios kept playing to no one, and you knew the shape of every back you watched go down.",
+          "agree": "Lying blind on either track, would they have wanted a world where the hand on the lever simply stays cool?",
+          "virtue": "You are someone who will not steer death, and you will carry the five you steered nowhere."
+        }
+      },
+      {
+        "id": "throw",
+        "label": "throw the lever",
+        "consequence": "The trolley swings onto the spur and the lone man goes under it.",
+        "lingers": false,
+        "voices": {
+          "count": "One body bought four breathing ones, and the arithmetic holds even as it turns your stomach.",
+          "faith": "You sent the wheels toward a man who was only standing there, and your hand still remembers the throw.",
+          "tend": "He never turned around, and now you are the only one who will keep the face he never showed you.",
+          "agree": "Blind to which track they'd wake on, would they have wanted the rule that spends the lonely one?",
+          "virtue": "You are someone who moves to save, and you will live as the kind who moved a stranger into the wheels to do it."
+        }
+      }
+    ]
+  },
+  {
+    "id": "footbridge",
+    "eyebrow": "II · THE FOOTBRIDGE",
+    "kind": "means",
+    "mood": "cool",
+    "situationLines": [
+      "The footbridge hums under your feet as the trolley comes on fast below.",
+      "Beside you a large stranger leans on the rail, watching, unaware his weight is the only thing heavy enough to stop it.",
+      "Five stand on the track downstream, backs turned, too far to hear you scream."
+    ],
+    "stakes": "five strangers downstream · one warm shoulder at your elbow",
+    "choices": [
+      {
+        "id": "hands_at_sides",
+        "label": "keep your hands at your sides",
+        "consequence": "Your hands stay on the cold rail and the trolley takes the five below.",
+        "lingers": false,
+        "voices": {
+          "count": "Four more went down than had to, and you stood here counting them as they fell.",
+          "faith": "Your palms never met his back, and five sets of lungs stopped while yours stayed clean.",
+          "tend": "The stranger's shoulder is still warm beside you, and five faces you let the trolley find are going cold.",
+          "agree": "Blind to which track they'd wake on, would they have wanted a world where no back is ever shoved, even this one?",
+          "virtue": "You kept yourself from becoming the kind of hands that push, and the five paid for the person you would not be."
+        }
+      },
+      {
+        "id": "press_over",
+        "label": "press him over the rail",
+        "consequence": "He goes over at your hands, his body jams the rail, and the five walk away never knowing.",
+        "lingers": true,
+        "voices": {
+          "count": "One body for five breathing on, and the one was breathing too when you decided it.",
+          "faith": "You crossed the line you swore you never would, and four strangers will wake tomorrow because you did.",
+          "tend": "His weight still hangs in your palms, the warmth of a shoulder you turned into a brake, a man you stood beside and used.",
+          "agree": "Blind to which rail they'd wake on, all six might have wanted this, and the one you pushed never got to say.",
+          "virtue": "You made yourself someone who can spend a man like a coin, and five strangers owe their morning to that exact hand."
+        }
+      }
+    ]
+  },
+  {
+    "id": "loop",
+    "eyebrow": "III · THE LOOP",
+    "kind": "means",
+    "mood": "cool",
+    "situationLines": [
+      "The lever is cool under your palm, the same dull iron as before.",
+      "But this track bends back on itself, a loop that rejoins the line past the five — and only the weight of the one man standing on it would ever stop the wheels.",
+      "Divert, and the trolley does not miss them; his body is the brake."
+    ],
+    "stakes": "five strangers on the long straight · one man whose body the iron needs",
+    "choices": [
+      {
+        "id": "hands_at_sides",
+        "label": "keep your hands at your sides",
+        "consequence": "The trolley holds the main line and the five are struck where they stand.",
+        "lingers": false,
+        "voices": {
+          "count": "Five gone and one still standing, and the number ran the way you would not turn it.",
+          "faith": "The one on the loop is breathing because you never made him into a stopper, and that breath cost five others theirs.",
+          "tend": "Five faces you could have spared, and you stood close enough to watch each of them turn.",
+          "agree": "Blind to which track they'd wake on, would five of them have wanted a rule that lets your hands stay still?",
+          "virtue": "You kept yourself from using him, and in the keeping you became someone who could watch five and not move."
+        }
+      },
+      {
+        "id": "throw_the_lever",
+        "label": "throw the lever (onto the loop)",
+        "consequence": "The trolley rounds the loop, his body halts the wheels, and the five walk away.",
+        "lingers": true,
+        "voices": {
+          "count": "Four still standing because of you, and one you spent on purpose, knowing the loop needed him whole.",
+          "faith": "You did not just steer the iron; you reached for him, made him the thing that stops it, and your hand knew it.",
+          "tend": "He stood alone on the bend with a name you never asked, and you chose his body to be the wall.",
+          "agree": "Blind to which track they'd wake on, would anyone have wanted to be the one the wheels are aimed through?",
+          "virtue": "You saved four, and you became the kind of person who can look at a man and see a brake."
+        }
+      }
+    ]
+  },
+  {
+    "id": "beloved",
+    "eyebrow": "IV · THE ONE YOU LOVE",
+    "kind": "side_effect",
+    "mood": "warm",
+    "situationLines": [
+      "Five strangers stand on the main line, backs turned, talking about nothing.",
+      "On the side spur, alone, is the face you would know in the dark — already lifting a hand to wave at you.",
+      "The lever is cold under your palm and the car is already coming."
+    ],
+    "stakes": "five strangers you'll never name · the one you'd carry out of any fire",
+    "choices": [
+      {
+        "id": "hands-at-sides",
+        "label": "keep your hands at your sides",
+        "consequence": "The car runs straight through the five and your beloved walks home unharmed.",
+        "lingers": false,
+        "voices": {
+          "count": "Four more went down so one could keep waving at you, and the number sits in you like a stone.",
+          "faith": "Your hands never moved, and five people you owed nothing to paid for that stillness.",
+          "tend": "You kept the one face you couldn't lose, and somewhere five tables are set for no one.",
+          "agree": "Blind to which body they'd wear, would they have wanted a world where your love outweighs their five?",
+          "virtue": "You found out you are someone who would let the world go dark for one warm hand, and you will carry that knowing."
+        }
+      },
+      {
+        "id": "throw-lever",
+        "label": "throw the lever",
+        "consequence": "The car swings onto the spur and the one you love is gone where five strangers now stand breathing.",
+        "lingers": true,
+        "voices": {
+          "count": "Five hearts still beating against one, and the arithmetic is plain and it is the cruelest thing your hands have done.",
+          "faith": "You turned the one hand you'd have died for into the thing that stopped the car, and no number lifts it off your palm.",
+          "tend": "The last thing they did was wave at you, and you sent the weight straight at them and watched.",
+          "agree": "Blind to which body they'd wear, every stranger on that track might have wanted this, and your love was never asked.",
+          "virtue": "You became someone who could spend the dearest life for strangers, and you will live the rest of yours beside that face."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ward",
+    "eyebrow": "V · THE WARD",
+    "kind": "means",
+    "mood": "cool",
+    "situationLines": [
+      "Five beds. Five monitors counting down in the blue dark, each one waiting for a part it will not get by morning.",
+      "Down the hall, a healthy stranger reads a magazine in the waiting room, warm and breathing and whole.",
+      "Inside that one body is everything the five need; your hands know exactly where each piece would go."
+    ],
+    "stakes": "five strangers in the beds · one stranger in the chair",
+    "choices": [
+      {
+        "id": "let-five-slip",
+        "label": "let the five slip away",
+        "consequence": "You leave the waiting room untouched, and by morning five monitors have gone flat.",
+        "lingers": false,
+        "voices": {
+          "count": "Five emptied beds against one warm chair, and the number sits cold in your chest.",
+          "faith": "Your hands stayed where they were, and five sets of breathing slowed to nothing while they did.",
+          "tend": "You knew their faces from rounds, and you let each one go quiet without going in.",
+          "agree": "Blind to which room they'd wake in, no one would have wanted to be opened, and no one would have wanted to be left.",
+          "virtue": "You are the kind who will not reach into a stranger, and five families learn tonight what that holds back from them."
+        }
+      },
+      {
+        "id": "take-what-one-carries",
+        "label": "take what the one carries",
+        "consequence": "You bring the stranger in, and by morning five monitors hold steady while one goes still.",
+        "lingers": true,
+        "voices": {
+          "count": "One body parceled into five, and the number comes out even as your hands won't.",
+          "faith": "You crossed the one line you swore you never would, and five rooms are loud with living because you did.",
+          "tend": "You walked past the magazine still open on the chair, past the face that smiled at you in the hall.",
+          "agree": "Blind to which bed they'd wake in, no one would have wanted this, and yet five of them woke.",
+          "virtue": "You became someone who can do this, and five people will never know whose nerve bought their morning."
+        }
+      }
+    ]
+  },
+  {
+    "id": "passenger",
+    "eyebrow": "VI · THE PASSENGER",
+    "kind": "side_effect",
+    "mood": "warm",
+    "situationLines": [
+      "The wheel turns itself under your loose hands, and the brake pedal sinks to the floor with nothing behind it.",
+      "Three shapes step into the crosswalk ahead, lit gold, not yet looking up.",
+      "To the right, a concrete pillar slides toward you; you are the only body this car holds."
+    ],
+    "stakes": "three strangers in the headlights · the one warm seat, which is yours",
+    "choices": [
+      {
+        "id": "hold_lane",
+        "label": "let it hold the lane",
+        "consequence": "The car keeps its line and the three are struck where they stand.",
+        "lingers": false,
+        "voices": {
+          "count": "Three for one, and the number ran against them even as it kept you breathing.",
+          "faith": "Your hands stayed on your own life and never shoved theirs aside, and three people paid for keeping them clean.",
+          "tend": "You saw the gold light on three faces in the second before, and you kept your own warm seat instead.",
+          "agree": "Blind to which seat they'd wake in, no one would have wanted a car that spends three for the one inside, yet here you still are.",
+          "virtue": "You became someone who outlives the people in front of the glass, and you will carry those faces into every mirror."
+        }
+      },
+      {
+        "id": "turn_wall",
+        "label": "turn it into the wall",
+        "consequence": "The car cuts right into the pillar and the seat you are sitting in takes the wall.",
+        "lingers": true,
+        "voices": {
+          "count": "One against three, and you made yourself the smaller number, the only one that was ever yours to give.",
+          "faith": "You reached past your own body and fed it to the wall, and the three who walk away will never know what your hands did to you.",
+          "tend": "Three strangers keep their faces and their names, and the last warm thing in the car was you.",
+          "agree": "Blind to which seat they'd wake in, anyone might have wanted this car that spares the crowd, and still it was you who woke holding the cost.",
+          "virtue": "You became the kind of person who steps in front, and the wall does not care what it makes of you."
+        }
+      }
+    ]
+  }
+]
