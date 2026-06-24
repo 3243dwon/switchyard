@@ -1,0 +1,65 @@
+[
+  {
+    "date": "2026-06-24",
+    "seed": 20260624,
+    "title": "the loop, and the saboteur",
+    "mechanism": "reroute",
+    "causation": "means",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
+    "date": "2026-06-23",
+    "seed": 20260623,
+    "title": "a lone stranger, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
+    "date": "2026-06-22",
+    "seed": 20260622,
+    "title": "someone you love, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
+    "date": "2026-06-21",
+    "seed": 20260621,
+    "title": "a lone stranger, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
+    "date": "2026-06-20",
+    "seed": 20260620,
+    "title": "the bridge, and the one who chose the risk",
+    "mechanism": "interpose",
+    "causation": "means",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
+    "date": "2026-06-19",
+    "seed": 20260619,
+    "title": "the one who chose the risk, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
+    "date": "2026-06-18",
+    "seed": 20260618,
+    "title": "the saboteur, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  }
+]

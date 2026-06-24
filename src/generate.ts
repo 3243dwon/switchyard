@@ -11,9 +11,17 @@ import type { Dilemma, Fate, Identity, Desert, Consent, Party, Topology, HazardK
 import { validate } from "./constraints.ts";
 import { theSwitch } from "./canon.ts";
 
+// avalanche the seed so adjacent seeds (e.g. consecutive dates) diverge sharply
+function mix32(x: number): number {
+  x = x >>> 0;
+  x = Math.imul(x ^ (x >>> 16), 0x45d9f3b);
+  x = Math.imul(x ^ (x >>> 16), 0x45d9f3b);
+  return (x ^ (x >>> 16)) >>> 0;
+}
+
 // deterministic PRNG (mulberry32)
 function rng(seed: number) {
-  let a = seed >>> 0;
+  let a = mix32(seed);
   return () => {
     a |= 0;
     a = (a + 0x6d2b79f5) | 0;
@@ -69,6 +77,16 @@ export function generate(seed: number, opts: GenerateOptions = {}): Dilemma {
     label: sideIdentity === "loved_one" ? "someone you love, alone on the spur" : "one on the side track",
   };
 
+  // a title that surfaces the dialed moral variable — who the one is — so every
+  // day reads as a distinct dilemma even when the mechanism repeats
+  const who =
+    side.desert === "villain" ? "the saboteur"
+    : side.desert === "culpable" ? "the one who chose the risk"
+    : side.identity === "loved_one" ? "someone you love"
+    : side.consent === "given" ? "the one who consented"
+    : side.identity === "acquaintance" ? "a face you know"
+    : "a lone stranger";
+
   let hazard: { kind: HazardKind; stoppableBy: StopMode[]; motion: "rolling" };
   let topology: Topology | undefined;
   let title: string;
@@ -76,13 +94,13 @@ export function generate(seed: number, opts: GenerateOptions = {}): Dilemma {
 
   if (shape === "interpose") {
     hazard = { kind: "trolley", stoppableBy: ["mass"], motion: "rolling" };
-    title = "a body to stop it";
+    title = `the bridge, and ${who}`;
     act = { id: "push", label: "push them onto the track", mechanism: "interpose", force: "personal", proximity: "contact", reversible: false, reliability: 1, fates: { main: L, side: D() } };
   } else {
     const isLoop = shape === "loop";
     hazard = { kind: "trolley", stoppableBy: isLoop ? ["diversion", "mass"] : ["diversion"], motion: "rolling" };
     topology = rail(isLoop);
-    title = isLoop ? "the loop, redrawn" : "the switch, redrawn";
+    title = isLoop ? `the loop, and ${who}` : `${who}, on the side track`;
     act = { id: "throw", label: isLoop ? "throw the switch (onto the loop)" : "throw the switch", mechanism: "reroute", force: "impersonal", proximity: "remote", reversible: true, reliability: 1, fates: { main: L, side: D() } };
   }
 

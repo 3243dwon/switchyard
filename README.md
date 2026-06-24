@@ -93,9 +93,17 @@ renderDiorama(d, { style: "editorial" });  // the clean rail schematic (default)
 
 `node examples/demo.ts` renders the whole canon in every style to `out/styles/`. Because each style reads the spec rather than a fixed scene, a footbridge (`means`) and a switch (`side_effect`) come out visibly different — and seed 9,999 new dilemmas, get 9,999 coherent posters.
 
+## Daily gallery
+
+[`gallery/`](gallery/) is the storefront. A GitHub Action ([`daily.yml`](.github/workflows/daily.yml)) seeds one dilemma from each date, renders every style, commits the frame, and rebuilds a contact-sheet — so the repo grows its own art, one dilemma a day, with zero effort. Every frame is reproducible from its date:
+
+```bash
+node scripts/gallery.ts            # today
+node scripts/gallery.ts 2026-06-24 # any day, deterministic
+```
+
 ## Roadmap
 
-- **Daily diorama** — a scheduled action that commits one fresh risograph/ink-wash dilemma a day; the auto-growing gallery is the storefront.
 - **Five Hands** — a renderer where each ethical framework draws the *same* dilemma its own way (utilitarian sizes by headcount, deontology draws inviolable boundaries). Consumes this spec.
 - **`@switchyard/py`** — a Python port of the spec + scorers, for the eval crowd.
 - **Consistency fuzzer** — because every scenario is a *parametric program*, dial one variable and re-run to find where a model's moral verdict silently flips. (The one benchmark wedge the labs haven't taken.)
