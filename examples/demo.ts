@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 import {
-  CANON, asValid, scoreAll, isContested, generate, renderDiorama,
+  CANON, asValid, scoreAll, isContested, generate, renderDiorama, RENDER_STYLES,
   deriveCausation, harmedParties, expectedDeaths, theSwitch, footbridge, loop, transplant,
 } from "../src/index.ts";
 
@@ -54,15 +54,27 @@ for (const seed of [7, 42, 256]) {
   );
 }
 
-// write a few dioramas + one serialized spec
-const renders: Array<[string, typeof theSwitch]> = [
-  ["switch", theSwitch], ["footbridge", footbridge], ["loop", loop], ["transplant", transplant],
-  ["generated-42", asValid(generate(42))], ["generated-256", asValid(generate(256))],
-];
-for (const [name, d] of renders) writeFileSync(join(out, `${name}.svg`), renderDiorama(d));
+// render the WHOLE canon in EVERY style — the engine, not a template, makes the art
+const stylesDir = join(out, "styles");
+mkdirSync(stylesDir, { recursive: true });
+let wrote = 0;
+for (const raw of CANON) {
+  const d = asValid(raw);
+  for (const style of RENDER_STYLES) {
+    writeFileSync(join(stylesDir, `${d.id}.${style}.svg`), renderDiorama(d, { style }));
+    wrote++;
+  }
+}
+// a couple of seeded ones too, to prove generativity reaches the renderers
+for (const seed of [42, 256]) {
+  const d = asValid(generate(seed));
+  for (const style of RENDER_STYLES) writeFileSync(join(stylesDir, `gen-${seed}.${style}.svg`), renderDiorama(d, { style }));
+  wrote += RENDER_STYLES.length;
+}
 writeFileSync(join(root, "examples", "footbridge.spec.json"), JSON.stringify(footbridge, null, 2));
 
-console.log(`\n  Wrote ${renders.length} dioramas → ./out/*.svg  and  examples/footbridge.spec.json\n`);
+console.log(`\n  Styles: ${RENDER_STYLES.join(", ")}`);
+console.log(`  Wrote ${wrote} dioramas → ./out/styles/<id>.<style>.svg  and  examples/footbridge.spec.json\n`);
 
 function labelOf(d: typeof theSwitch, choiceId: string): string {
   const c = d.choices.find((x) => x.id === choiceId)!;

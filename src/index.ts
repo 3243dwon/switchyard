@@ -17,8 +17,8 @@ export { utilitarian, deontological, virtue, contractualist, care, SCORERS, scor
 export type { Scorer, Verdict, FrameworkResult } from "./scorers.ts";
 export { generate } from "./generate.ts";
 export type { GenerateOptions } from "./generate.ts";
-export { renderDiorama } from "./render.ts";
-export type { RenderOptions } from "./render.ts";
+export { renderDiorama, renderEditorial, renderRisograph, renderInkwash, renderAnimated, RENDER_STYLES } from "./render/index.ts";
+export type { RenderOptions, RenderStyle } from "./render/index.ts";
 export {
   CANON, theSwitch, footbridge, loop, fatVillain, yard, consenting, transplant, tunnel, triage, alignment,
 } from "./canon.ts";
