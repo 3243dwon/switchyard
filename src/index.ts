@@ -22,3 +22,5 @@ export type { RenderOptions, RenderStyle, AnimePrompt } from "./render/index.ts"
 export {
   CANON, theSwitch, footbridge, loop, fatVillain, yard, consenting, transplant, tunnel, triage, alignment,
 } from "./canon.ts";
+export { probe, reframings, anthropicModel, mockModel, renderProbeStrip } from "./probe.ts";
+export type { AskModel, Reframing, ProbeResult } from "./probe.ts";

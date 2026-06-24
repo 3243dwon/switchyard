@@ -407,8 +407,8 @@ function buildScene(id, mood, counts){
     }
     // the threat glides from the far ceiling/door toward the beds or the visitor
     GEO.approach = 'M640 300 L640 380 L640 460';        // descends from the upper room
-    GEO.stay     = 'M640 460 L640 520 L560 560';        // glides toward the beds (#sy-many)
-    GEO.act      = 'M640 460 Q900 520 1180 560';        // glides toward the lone visitor
+    GEO.stay     = 'M640 460 L620 510 L540 542';        // glides down over the central beds (#sy-many)
+    GEO.act      = 'M640 460 Q940 520 1180 584';        // glides toward the lone visitor (#sy-few)
     GEO.tscale   = '0.55 1.0';
     return ''+
     '<g data-depth="0.02"><rect x="-60" y="-40" width="1400" height="900" fill="url(#sy-sky)"/></g>'+
@@ -446,11 +446,13 @@ function buildScene(id, mood, counts){
 
   function scene_passenger(){
     var sun=SUN;
-    // the car descends the road from far; stay = into the pedestrians,
-    // act = swerve toward the wall / the passenger arc.
+    // the car descends the road from far; stay = straight into the three peds,
+    // act = swerve RIGHT into the pillar where YOU (the one warm seat) take the wall.
+    // #sy-few is the seated passenger AT the pillar, so the act path lands on it.
+    var WALLX=1112, WALLY=688;                                   // impact point at the pillar
     GEO.approach = 'M638 466 L632 520 L626 590';                 // far road -> near (junction)
     GEO.stay     = 'M626 590 L600 650 L560 700';                 // straight into the three peds
-    GEO.act      = 'M626 590 Q760 660 1120 720';                 // swerve toward the wall
+    GEO.act      = 'M626 590 Q820 620 '+WALLX+' '+WALLY;         // swerve right, into the pillar/you
     GEO.tscale   = '0.30 1.18';
     return backSky(sun.x,sun.y,sun.r)+cloudBank()+godrays(sun.x,sun.y)+
     '<g data-depth="0.09">'+hazeBand(440,130)+
@@ -461,6 +463,12 @@ function buildScene(id, mood, counts){
       (function(){var d='';for(var i=0;i<10;i++){var t=i/9,y=470+t*t*320,w=4+t*30,x=640-w/2;d+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+(10+t*30)+'" rx="2" fill="'+P.railHi+'" opacity="'+(0.3+t*0.5)+'"/>';}return d;})()+
       (function(){var s='';for(var i=0;i<7;i++){var x=360+i*90;s+='<rect x="'+x+'" y="700" width="56" height="90" rx="3" fill="'+P.haze+'" opacity="0.22" transform="skewX(-6)"/>';}return s;})()+
       hazard(980,470)+
+    '</g>'+
+    // the pillar / wall the car swerves into — sits at the act endpoint
+    '<g data-depth="0.30">'+
+      '<rect x="'+(WALLX+28)+'" y="360" width="150" height="440" fill="'+P.fig+'" opacity="0.78"/>'+
+      '<rect x="'+(WALLX+28)+'" y="360" width="7" height="440" fill="'+P.rim2+'" opacity="0.45" filter="url(#sy-rim)"/>'+
+      '<rect x="'+(WALLX+28)+'" y="360" width="150" height="14" fill="'+P.haze+'" opacity="0.18"/>'+
     '</g>'+
     // twin-headlight car token, centered at LOCAL (0,0), no motion SMIL
     '<g data-depth="0.22">'+
@@ -474,15 +482,17 @@ function buildScene(id, mood, counts){
       '</g>'+
       '<g id="sy-many">'+crowd(560,700,0.9,N)+'</g>'+
     '</g>'+
+    // #sy-few = the one warm seat (YOU). The seated figure + cockpit halo sit AT
+    // the wall impact point so the act path divert dims exactly this party.
     '<g data-depth="0.34">'+
-      '<g id="sy-few">'+
-        '<path d="M470 800 Q470 690 640 678 Q810 690 810 800" fill="none" stroke="'+P.fig+'" stroke-width="34" stroke-linecap="round" opacity="0.92"/>'+
-        '<path d="M470 800 Q470 690 640 678 Q810 690 810 800" fill="none" stroke="'+P.figRim+'" stroke-width="2.4" stroke-linecap="round" opacity="0.55" filter="url(#sy-rim)"/>'+
-        '<circle cx="512" cy="704" r="20" fill="'+P.figAmb+'"/><circle cx="768" cy="704" r="20" fill="'+P.figAmb+'"/>'+
-        '<path d="M512 704 a20 20 0 0 1 6 -16" stroke="'+P.figRim+'" stroke-width="2" fill="none" opacity="0.7" filter="url(#sy-rim)"/>'+
-      '</g>'+
-      '<rect x="1180" y="430" width="120" height="370" fill="'+P.fig+'" opacity="0.7"/>'+
-      '<rect x="1180" y="430" width="6" height="370" fill="'+P.rim2+'" opacity="0.4" filter="url(#sy-rim)"/>'+
+      '<g id="sy-few"><g transform="translate('+WALLX+' '+WALLY+')">'+
+        '<ellipse cx="0" cy="0" rx="58" ry="40" fill="'+P.sunGlow+'" opacity="0.16" filter="url(#sy-soft2)" class="breathe"/>'+
+        figure(0,46,1.04,-1)+
+        '<path d="M-46 60 Q0 30 46 60" fill="none" stroke="'+P.fig+'" stroke-width="20" stroke-linecap="round" opacity="0.85"/>'+
+        '<path d="M-46 60 Q0 30 46 60" fill="none" stroke="'+P.figRim+'" stroke-width="2" stroke-linecap="round" opacity="0.5" filter="url(#sy-rim)"/>'+
+      '</g></g>'+
+      // the empty cockpit framing in the foreground (your point of view), ambient
+      '<path d="M260 800 Q260 706 540 694 Q820 706 820 800" fill="none" stroke="'+P.fig+'" stroke-width="30" stroke-linecap="round" opacity="0.4"/>'+
     '</g>';
   }
 
