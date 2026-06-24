@@ -1,0 +1,36 @@
+{
+  "name": "@switchyard/core",
+  "version": "0.1.0",
+  "description": "A typed, seedable grammar for moral dilemmas — faker.js for the trolley problem.",
+  "type": "module",
+  "keywords": [
+    "trolley-problem",
+    "ethics",
+    "moral-dilemma",
+    "philosophy",
+    "generative",
+    "dilemma-generator",
+    "ai-alignment",
+    "double-effect"
+  ],
+  "license": "MIT",
+  "author": "3243dwon",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "spec",
+    "README.md"
+  ],
+  "scripts": {
+    "demo": "node examples/demo.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

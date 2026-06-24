@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+dist/
+# generated dioramas — regenerate with `npm run demo`
+out/

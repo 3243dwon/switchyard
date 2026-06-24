@@ -1,0 +1,76 @@
+{
+  "id": "footbridge",
+  "title": "the footbridge",
+  "domain": "rail",
+  "hazard": {
+    "kind": "trolley",
+    "stoppableBy": [
+      "mass"
+    ],
+    "motion": "rolling"
+  },
+  "decider": "bystander",
+  "parties": [
+    {
+      "id": "main",
+      "count": 5,
+      "identity": "stranger",
+      "desert": "innocent",
+      "consent": "none",
+      "agency": "bystander",
+      "label": "five on the main track"
+    },
+    {
+      "id": "side",
+      "count": 1,
+      "identity": "stranger",
+      "desert": "innocent",
+      "consent": "none",
+      "agency": "bystander",
+      "label": "the large stranger"
+    }
+  ],
+  "baselineVictimIds": [
+    "main"
+  ],
+  "choices": [
+    {
+      "id": "wait",
+      "label": "do nothing",
+      "mechanism": "omission",
+      "force": "none",
+      "proximity": "near",
+      "reversible": false,
+      "reliability": 1,
+      "fates": {
+        "main": {
+          "outcome": "dies",
+          "prob": 1
+        },
+        "side": {
+          "outcome": "survives",
+          "prob": 0
+        }
+      }
+    },
+    {
+      "id": "push",
+      "label": "push them onto the track",
+      "mechanism": "interpose",
+      "force": "personal",
+      "proximity": "contact",
+      "reversible": false,
+      "reliability": 1,
+      "fates": {
+        "main": {
+          "outcome": "survives",
+          "prob": 0
+        },
+        "side": {
+          "outcome": "dies",
+          "prob": 1
+        }
+      }
+    }
+  ]
+}
