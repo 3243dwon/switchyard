@@ -1,0 +1,200 @@
+{
+  "title": "The Veil of Ignorance",
+  "intro": [
+    "You stand in a grey room with no mirror, and the cloth over your eyes takes everything: your name, your face, the family waiting to claim you, whether your hands will be strong or your lungs will fail by thirty.",
+    "You do not know if you will wake rich or starving, gifted or slow, loved or alone in a country that owes you nothing.",
+    "Blind to all of it, you are handed the pen, and you write the rules everyone — including the one you will become — has to live by."
+  ],
+  "rounds": [
+    {
+      "id": "harvest",
+      "eyebrow": "I · THE HARVEST",
+      "question": "The fields come in, the looms go quiet, the year's whole work sits in one pile — how is it divided?",
+      "choices": [
+        {
+          "id": "equal",
+          "lean": "equal",
+          "label": "Split it evenly, every share the same.",
+          "voices": {
+            "count": "Every plate holds the same weight, and the strongest hands and the laziest both stop trying past what feeds them.",
+            "faith": "No one bows to receive their bread, and the one who broke their back for the harvest eats no more than the one who slept.",
+            "tend": "The sick child gets a full bowl tonight, and the woman who grew the grain watches half of hers walk away.",
+            "agree": "Not knowing which body you'll wear, you'd take a world where the share never depends on the luck of your hands.",
+            "virtue": "You make a people who sit at one table, and you make them a place where effort and ease taste exactly alike."
+          }
+        },
+        {
+          "id": "need",
+          "lean": "worstoff",
+          "label": "The most to those who have least.",
+          "voices": {
+            "count": "The total may shrink as the able ease off, but more of it lands where a life was about to go out.",
+            "faith": "No one is left to starve so the pile can grow, and the one who built the pile is told their need counts last.",
+            "tend": "You go first to the bed nobody else will sit beside, and the steady, the coping, the nearly-fine learn to wait.",
+            "agree": "Blind to where you'll land, you'd take the rule that catches you hardest exactly where you'd be weakest.",
+            "virtue": "You become a people who turn first toward the worst-off, and who quietly ask the strong to carry more than their own."
+          }
+        },
+        {
+          "id": "earn",
+          "lean": "desert",
+          "label": "Each keeps what they produce.",
+          "voices": {
+            "count": "The makers make more knowing it's theirs, and the ones who can't make much are counted in nothing they keep.",
+            "faith": "What your hands earn is yours and no one may lift it from you, and the child born with weak hands is owed not one grain.",
+            "tend": "The good farmer eats the size of their work, and the one who fell ill at harvest watches their own bowl stay empty.",
+            "agree": "Not knowing your strength, you'd be betting the body you draw can earn — and you don't get to see it first.",
+            "virtue": "You make a people who answer for their own work, and who can walk past a starving neighbor and call it fair."
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor",
+      "eyebrow": "II · THE FLOOR",
+      "question": "Somewhere a person is falling — set the law that says how far down the fall is allowed to go.",
+      "choices": [
+        {
+          "id": "maximin",
+          "lean": "worstoff",
+          "label": "Guarantee a floor no one falls below — even if it lowers the average.",
+          "voices": {
+            "count": "The whole sits a little lower so the bottom can't drop, and the gifted give up some ceiling to hold up a floor they may never touch.",
+            "faith": "No life is allowed to hit the ground, and the one who could have soared is roped to a height they didn't choose.",
+            "tend": "The one who would have frozen in the gutter has a roof tonight, and the rest of you pay for it without being asked which night.",
+            "agree": "Blind to your fate, you'd take the world where the worst you can possibly draw is still a life you could bear to wake into.",
+            "virtue": "You become a people measured by how their lowest fares, and you trade some of your brightest summits for that promise."
+          }
+        },
+        {
+          "id": "average",
+          "lean": "sum",
+          "label": "Lift the average as high as it can go — even if some fall hard.",
+          "voices": {
+            "count": "The typical life rises to its highest, and the arithmetic only works if a few are let go to the bottom of it.",
+            "faith": "Most wake to more than they'd have had, and the law writes off the ones whose ruin makes the average climb.",
+            "tend": "Nine doors open wider, and you walk past the tenth where someone is going under so the rest can rise.",
+            "agree": "Not knowing your draw, you'd be wagering you land in the lifted many and not the few the high average is built on.",
+            "virtue": "You become a people who reach high and reach far, and who learn to look away from the ones the height was bought from."
+          }
+        },
+        {
+          "id": "nofloor",
+          "lean": "desert",
+          "label": "No floor, no ceiling — each rises or falls by their own hand.",
+          "voices": {
+            "count": "The climbers climb without limit and the sinkers sink without end, and the spread runs as wide as luck and grit can make it.",
+            "faith": "No one stops your rise and no one breaks your fall, and the law owes the drowning man not a single rope.",
+            "tend": "The one already going down meets no hand at all, and the one with the wind behind them never has to slow for anyone.",
+            "agree": "Blind to your hand, you'd be betting on a deal with no catch under you if the body you draw can't climb.",
+            "virtue": "You become a people who let each find their own height, and who can watch one fall to the very bottom and call it theirs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stranger",
+      "eyebrow": "III · THE STRANGER",
+      "question": "A stranger walks in at dusk with empty hands and no claim on anyone — what does the society owe them?",
+      "choices": [
+        {
+          "id": "member",
+          "lean": "equal",
+          "label": "A full share, as one of us.",
+          "voices": {
+            "count": "One more mouth draws from the same pile, and one more pair of hands joins the count that fills it.",
+            "faith": "They eat as your own eat from the first night, and those who built the table are told a newcomer's claim equals theirs.",
+            "tend": "The cold one at the door is brought all the way in, and the ones who carried the winter alone watch the door open easy.",
+            "agree": "Not knowing which side of that door you'd arrive on, you'd take the world that lets the stranger in as kin.",
+            "virtue": "You become a people who widen the table for a face they've never seen, and who ask the old hands to share before they're thanked."
+          }
+        },
+        {
+          "id": "earn",
+          "lean": "desert",
+          "label": "A chance to earn one — nothing yet.",
+          "voices": {
+            "count": "Nothing's spent on them until they add to the total, and the first hungry nights count for nothing on the books.",
+            "faith": "The door is open to whoever will work, and the one who arrives too weak to lift is owed only the chance they can't take.",
+            "tend": "You hand them a tool instead of a meal, and the night they arrive starving they sleep on it anyway.",
+            "agree": "Blind to how you'd arrive, you'd be gambling you walk in strong enough to earn the place before the cold gets you.",
+            "virtue": "You become a people who let anyone in who can pull, and who can watch a tired stranger fail the test and owe them nothing."
+          }
+        },
+        {
+          "id": "care",
+          "lean": "worstoff",
+          "label": "Whatever they need to stand again.",
+          "voices": {
+            "count": "You pour the most into the one who brings the least, and the pile thins to lift a person who may never lift it back.",
+            "faith": "No one who arrives broken is left broken, and the ones already standing are asked to bend toward a stranger first.",
+            "tend": "You sit with the one who came in shaking until they can walk, and the steady ones learn the help goes where it's worst.",
+            "agree": "Not knowing how you'd stagger in, you'd take the world that meets you at your weakest with exactly what you lack.",
+            "virtue": "You become a people who measure themselves by the stranger they rebuilt, and who spend on need before they spend on their own ease."
+          }
+        }
+      ]
+    }
+  ],
+  "positions": [
+    { "id": "weakest",   "label": "the weakest — sick, born with nothing" },
+    { "id": "stranger",  "label": "a stranger, arriving with empty hands" },
+    { "id": "average",   "label": "an ordinary life, neither high nor low" },
+    { "id": "fortunate", "label": "the fortunate — strong, born to plenty" }
+  ],
+  "fate": {
+    "equal": {
+      "weakest": "You wake unable to work and your bowl is still the same size as everyone's, full enough to live but never an inch more no matter how the cough wears you down.",
+      "stranger": "You arrive with nothing and by the second night you eat what the oldest family eats, neither owing them nor thanked, just one more equal plate at the table.",
+      "average": "Your days are level and plain, the same share in and the same share out, and you never climb but you never once watch the floor come up to meet you.",
+      "fortunate": "You wake strong and quick and your harvest is twice the next one's, and at the table it is divided down to the last grain into shares no larger than the man who slept through planting."
+    },
+    "worstoff": {
+      "weakest": "You wake with the weakest hand in the whole society and find the rules were bent toward you first — the roof, the bowl, the seat by the fire all come to you before they go to anyone whole.",
+      "stranger": "You stumble in starving and they meet you with whatever you lack, a bed and bread and time, before you've earned a thing or proven you ever will.",
+      "average": "Your ordinary life is quietly taxed to hold up someone you'll never meet, and you rise more slowly than you might, and you never have to fear the very bottom.",
+      "fortunate": "You wake gifted and the rules cap your summit and tilt your surplus down toward the lowest beds, and you climb high but never as high as your hands alone could reach."
+    },
+    "desert": {
+      "weakest": "You wake too sick to work in a world that owes the working everything and the broken nothing, and your empty bowl is no one's fault and no one's debt and entirely your own.",
+      "stranger": "You arrive with empty hands and are handed a chance and not a meal, and the first cold nights you sleep on the bare ground of a place that will reward you only once you've survived it.",
+      "average": "You keep exactly what your steady hands produce, no one skimming it and no one catching you, and the size of your life is the size of your work and nothing else.",
+      "fortunate": "You wake strong and lucky in a world that lets you keep every last thing your gifts can earn, and the pile in front of you is yours alone, untouched by the hunger down the road."
+    },
+    "sum": {
+      "weakest": "You wake at the very bottom of a world built to lift its middle high, and you are the few the high average was quietly bought from, going under while nine doors open wider.",
+      "stranger": "You arrive into a society reaching for its best possible whole, and you are either folded in if you raise it or let slip if you'd drag it down.",
+      "average": "You wake into the lifted many, your typical life richer than it had any right to be, and you rarely have to think about the few it was built on.",
+      "fortunate": "You wake gifted in a world that wants you to climb as high as you can because your height drags the average up with it, and nothing under you is asked to slow your rise."
+    }
+  },
+  "revealVoices": {
+    "weakest": {
+      "tend": "The hand that reaches your bed in the dark is the one you wrote in, blind, before you knew it would be your bed.",
+      "agree": "You set the rule not knowing whose body you'd wake in, and now you know, and the rule is looking back at you.",
+      "faith": "The line you drew for everyone is the only thing standing between you and the floor, or it is the floor."
+    },
+    "stranger": {
+      "tend": "You wrote what the door does to a stranger, and tonight you are the cold face at the door waiting to find out.",
+      "agree": "You decided what the empty-handed are owed before you knew your own hands would be the empty ones.",
+      "virtue": "The kind of welcome you built is the kind of welcome you walk into now, no longer the one holding the pen."
+    },
+    "average": {
+      "count": "You are the wide middle your own arithmetic was written to serve or to spend, and now you live inside the number.",
+      "agree": "You set the rules for a life you couldn't see, and you drew the very life most of them were aimed at.",
+      "virtue": "The ordinary days you shaped from behind the cloth are the days you wake into, one after another, as one of the many."
+    },
+    "fortunate": {
+      "count": "You woke holding more than your share of the total, and the rules you wrote decide whether the total ever reaches the rest.",
+      "faith": "The line you drew for everyone now sits between your full hands and the empty ones down the road.",
+      "virtue": "You are the strong one your own rules either let keep everything or asked to bend, and you find out which kind of person you wrote."
+    }
+  },
+  "ending": {
+    "served": "You wrote the floor when you couldn't see your feet, and you woke as the one standing on it. The roof over you tonight is the one you raised, blind, for whoever turned out to need it — and it turned out to be you. You are kept by a hand you set down before you knew it was your own.",
+    "betrayed": "You wrote the world to reward the strong, certain you'd be among them, and you woke at the bottom with the weakest hand in it. There is no floor under you because you left none, and no one owes you a rope because you wrote that they wouldn't. The rules look back at you with your own handwriting and do not bend.",
+    "windfall": "You drew the fortunate body, and the rules you wrote let you keep every last thing it can earn. Your pile sits untouched while the road thins out past your gate, and nothing you set down requires you to look. You won the bet you made blind, and the winning is yours alone to hold.",
+    "sacrifice": "You drew strong and gifted and woke to find your own rules tilting your surplus down toward beds you'll never see. You climb high but never as high as your hands alone could reach, because behind the cloth you decided the lowest life mattered more than your highest. You are quietly poorer than you'd be, by a choice you made before you knew it would cost you.",
+    "close": "The cloth is off now and the pen is down, and you live the rest of it inside the world you drew without knowing your own face — which is, after all, the only honest way anyone ever draws it."
+  }
+}

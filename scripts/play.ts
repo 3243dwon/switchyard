@@ -229,7 +229,7 @@ const APP = `
     h+='<div class="council">';
     ORDER.forEach(function(k){h+='<div class="cvoice"><p class="clabel">'+LABEL[k]+'</p><p class="cline">'+CLOSE[k]+'</p></div>';});
     h+='</div><p class="endline last">None of them is wrong. They never stopped arguing. Neither, now, will you.</p>';
-    h+='<button class="walkon" id="again">walk back through</button></div>';
+    h+='<div class="navrow"><button class="walkon" id="again">walk back through</button><a class="walkon link" href="veil.html">the next chapter &middot; the veil of ignorance &rarr;</a></div></div>';
     textEl.innerHTML=h; textEl.onclick=null;
     document.getElementById('again').onclick=function(){location.reload();};
     var els=textEl.querySelectorAll('.eyebrow,.endline,.clead,.cvoice,.last,.walkon');
@@ -285,6 +285,9 @@ html,body{height:100%;background:#000;overflow:hidden}
 .voice.linger{color:#efe3cd;font-size:clamp(16px,2.15vw,21px);border-left-color:rgba(231,217,195,.5)}
 .walkon{margin-top:32px;font:500 14px/1 var(--serif);letter-spacing:.2em;text-transform:uppercase;color:#e7d9c3;background:none;border:none;cursor:pointer;opacity:0;transition:opacity 1.5s ease}
 .walkon.show{opacity:.82}.walkon:hover{color:#fff}
+.navrow{display:flex;flex-direction:column;gap:8px;align-items:center}
+.walkon.link{font-size:12px;letter-spacing:.16em;color:#a99a80;text-decoration:none;margin-top:4px}
+.walkon.link.show{opacity:.6}.walkon.link:hover{color:#f4efe6}
 /* ---- ending: a centered, composed full-screen closing moment ---- */
 #text.ending{position:absolute;inset:0;left:0;right:0;bottom:0;max-width:none;display:flex;align-items:center;justify-content:center;overflow-y:auto;padding:6vh max(26px,5vw)}
 #text.ending::-webkit-scrollbar{width:0;height:0}

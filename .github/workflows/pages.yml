@@ -25,9 +25,11 @@ jobs:
       - name: Build the site
         run: |
           node scripts/play.ts
+          node scripts/veil.ts
           node scripts/preview.ts
           mkdir -p site
-          cp out/play.html site/index.html      # the experience IS the landing
+          cp out/play.html site/index.html      # chapter one — the experience IS the landing
+          cp out/veil.html site/veil.html        # chapter two — the veil of ignorance
           cp out/preview.html site/preview.html  # every dilemma, every style
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
