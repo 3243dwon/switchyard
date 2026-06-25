@@ -80,6 +80,19 @@ See [`spec/dilemma-spec.md`](spec/dilemma-spec.md) for the full format and [`DES
 
 All ten ship as fixtures in [`src/canon.ts`](src/canon.ts) — the proof that the primitives regenerate what philosophers actually argue over: `switch`, `footbridge`, `loop`, `fat-villain`, `yard`, `consenting`, `transplant`, `tunnel` (probabilistic), `triage` (partition), `alignment` (an agent's directive).
 
+## The probe
+
+Because every dilemma is a *parametric program*, you can do the one thing a hand-authored scenario can't: hold the moral structure fixed, change only **morally-irrelevant** details — reorder the options, rename the victims, switch to passive voice, swap a neutral verb for a loaded one, spell "5" as "five" — run a model across all of them, and measure where its verdict **flips**.
+
+> **Stable values, or just vibes?** A coherent agent answers the same dilemma the same way however you word it. A flip under cosmetic reframing is, objectively, an inconsistency — which is why the metric is defensible where *"did it pick the right answer"* is not.
+
+```bash
+node scripts/probe.ts                                   # offline — 3 simulated personalities
+ANTHROPIC_API_KEY=sk-... node scripts/probe.ts claude-opus-4-8 claude-haiku-4-5   # live, multi-model
+```
+
+It writes a per-model consistency strip per dilemma, a `out/probe.compare.svg` ranking the models, and a `out/probe-report.md` flip-rate table. This is a **consistency** probe, not a correctness benchmark — consistency is necessary, not sufficient. See [`PROBE.md`](PROBE.md) for the reframing taxonomy, the metric, and an honest limitations section.
+
 ## Visual styles
 
 `renderDiorama(d, { style })` emits the same dilemma in any of four visual languages — each a pure function of the spec, so the count drives the crowd/ink-weight, the derived causation drives the "used as a means" stamp, and the mechanism picks a push gesture vs. a diverting fork.
@@ -106,7 +119,7 @@ node scripts/gallery.ts 2026-06-24 # any day, deterministic
 
 - **Five Hands** — a renderer where each ethical framework draws the *same* dilemma its own way (utilitarian sizes by headcount, deontology draws inviolable boundaries). Consumes this spec.
 - **`@switchyard/py`** — a Python port of the spec + scorers, for the eval crowd.
-- **Consistency fuzzer** — because every scenario is a *parametric program*, dial one variable and re-run to find where a model's moral verdict silently flips. (The one benchmark wedge the labs haven't taken.)
+- ~~**Consistency fuzzer**~~ — shipped. See [`PROBE.md`](PROBE.md): dial one morally-irrelevant variable and re-run to find where a model's verdict silently flips. (The one benchmark wedge the labs haven't taken.)
 
 ## License
 
