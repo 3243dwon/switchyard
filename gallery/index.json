@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-06-26",
+    "seed": 20260626,
+    "title": "the bridge, and a lone stranger",
+    "mechanism": "interpose",
+    "causation": "means",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-06-25",
     "seed": 20260625,
     "title": "the loop, and someone you love",
