@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-06-28",
+    "seed": 20260628,
+    "title": "someone you love, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-06-27",
     "seed": 20260627,
     "title": "the bridge, and the saboteur",
