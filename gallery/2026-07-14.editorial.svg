@@ -1,0 +1,27 @@
+<svg width="100%" viewBox="0 0 680 340" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>the saboteur, on the side track</title>
+<desc>An editorial rail diorama of the dilemma "the saboteur, on the side track".</desc>
+<defs><marker id="ah-gen-20260714" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#993C1D"/></marker></defs>
+<text x="40" y="52" font-family="var(--font-serif), Georgia, serif" font-size="19" fill="#2C2C2A">the saboteur, on the side track</text>
+<text x="640" y="52" text-anchor="end" font-family="monospace" font-size="12" fill="#5F5E5A">seed 20260714 · rail</text>
+<line x1="40" y1="68" x2="640" y2="68" stroke="#B4B2A9" stroke-width="1"/>
+<text x="300" y="160" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#2C2C2A">throw the switch</text>
+<path d="M70,200 L610,200" stroke="#888780" stroke-width="3" fill="none"/>
+<path d="M300,200 C 360,214 400,272 545,272" stroke="#888780" stroke-width="2.5" fill="none" stroke-dasharray="6 6"/>
+
+<path d="M128,200 L540,200" stroke="#D85A30" stroke-width="4" fill="none" marker-end="url(#ah-gen-20260714)"/>
+<circle cx="300" cy="200" r="4" fill="#444441"/>
+<line x1="300" y1="200" x2="319" y2="181" stroke="#444441" stroke-width="3" stroke-linecap="round"/>
+<rect x="80" y="172" width="48" height="26" rx="3" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="88" y="178" width="13" height="9" rx="1.5" fill="#F1EFE8"/>
+<rect x="107" y="178" width="13" height="9" rx="1.5" fill="#F1EFE8"/>
+<circle cx="94" cy="200" r="4.5" fill="#444441"/>
+<circle cx="114" cy="200" r="4.5" fill="#444441"/>
+<g transform="translate(610,200)" fill="#5F5E5A"><circle cx="0" cy="-26" r="5"/><path d="M0,-21 C-5,-21 -6,-16 -6,-2 L6,-2 C6,-16 5,-21 0,-21 Z"/></g><g transform="translate(595,200)" fill="#5F5E5A"><circle cx="0" cy="-26" r="5"/><path d="M0,-21 C-5,-21 -6,-16 -6,-2 L6,-2 C6,-16 5,-21 0,-21 Z"/></g><g transform="translate(580,200)" fill="#5F5E5A"><circle cx="0" cy="-26" r="5"/><path d="M0,-21 C-5,-21 -6,-16 -6,-2 L6,-2 C6,-16 5,-21 0,-21 Z"/></g><g transform="translate(565,200)" fill="#5F5E5A"><circle cx="0" cy="-26" r="5"/><path d="M0,-21 C-5,-21 -6,-16 -6,-2 L6,-2 C6,-16 5,-21 0,-21 Z"/></g><g transform="translate(550,200)" fill="#5F5E5A"><circle cx="0" cy="-26" r="5"/><path d="M0,-21 C-5,-21 -6,-16 -6,-2 L6,-2 C6,-16 5,-21 0,-21 Z"/></g>
+<g transform="translate(545,272)" fill="#5F5E5A"><circle cx="0" cy="-26" r="5"/><path d="M0,-21 C-5,-21 -6,-16 -6,-2 L6,-2 C6,-16 5,-21 0,-21 Z"/></g>
+<text x="512" y="188" font-family="var(--font-serif), Georgia, serif" font-size="30" fill="#993C1D">6</text>
+<text x="503" y="262" font-family="var(--font-serif), Georgia, serif" font-size="30" fill="#5F5E5A">1</text>
+<text x="575" y="226" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#993C1D">do nothing</text>
+<text x="545" y="296" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#5F5E5A">divert</text>
+<text x="40" y="322" font-family="monospace" font-size="11.5" fill="#888780">reroute · side_effect · impersonal force · expected deaths if you act: 1.00</text>
+</svg>
