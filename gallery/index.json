@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-07-15",
+    "seed": 20260715,
+    "title": "the loop, and the saboteur",
+    "mechanism": "reroute",
+    "causation": "means",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-07-14",
     "seed": 20260714,
     "title": "the saboteur, on the side track",
