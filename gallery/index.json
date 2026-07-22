@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-07-22",
+    "seed": 20260722,
+    "title": "someone you love, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-07-21",
     "seed": 20260721,
     "title": "someone you love, on the side track",
