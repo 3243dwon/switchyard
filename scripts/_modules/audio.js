@@ -71,10 +71,13 @@ function createAudio(){
     return b;
   }
 
-  // ---- synthesized convolver impulse (2.6s exp decay, darker tail) -----------
+  // ---- synthesized convolver impulse ----------------------------------------
+  // 1.3s and brighter, down from 2.6s and dark. A long dark tail is a cathedral;
+  // this room is small, lit, and has hard walls, and every sound in it should
+  // stop when the thing that made it stops.
   function buildReverb(){
     try{
-      var dur = 2.6;
+      var dur = 1.3;
       var rate = ctx.sampleRate;
       var len = Math.floor(rate*dur);
       var off = new (window.OfflineAudioContext||window.webkitOfflineAudioContext)(2, len, rate);
@@ -91,7 +94,7 @@ function createAudio(){
         }
       }
       src.buffer = ib;
-      var lp = off.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value = 2600; lp.Q.value = 0.4;
+      var lp = off.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value = 4200; lp.Q.value = 0.4;
       src.connect(lp); lp.connect(off.destination);
       src.start(0);
       return off.startRendering().then(function(buf){
@@ -155,13 +158,16 @@ function createAudio(){
     var lfos = [];
     var warm = (mood==='warm');
 
-    // --- triad of detuned low oscillators through a breathing lowpass ---------
-    var lp = mkFilter('lowpass', warm?380:300, 0.6);
+    // --- the bed, retuned for the white room -------------------------------
+    // The old bed was a 55Hz sawtooth triad under a 300Hz lowpass: a wall of
+    // sub, which is how you score dread. The room is lit now and there is
+    // nowhere to hide, so the bed loses its floor — the 55Hz fundamental goes,
+    // triangles replace sawtooths, and the cutoff opens. What is left reads as
+    // a tuned room rather than an approaching threat.
+    var lp = mkFilter('lowpass', warm?900:760, 0.5);
     lp.connect(g);
-    var triad = warm
-      ? [{f:55,t:'sawtooth'},{f:82.41,t:'triangle'},{f:110,t:'sawtooth'}]
-      : [{f:55,t:'sawtooth'},{f:82.41,t:'triangle'},{f:110,t:'sawtooth'}];
-    var triGain = mkGain(0.06); triGain.connect(lp);
+    var triad = [{f:110,t:'triangle'},{f:164.81,t:'sine'},{f:220,t:'triangle'}];
+    var triGain = mkGain(0.035); triGain.connect(lp);
     triad.forEach(function(o,i){
       var osc = mkOsc(o.t, o.f);
       osc.detune.value = (i-1)*4;   // slight spread
@@ -199,7 +205,7 @@ function createAudio(){
     return {
       mood: mood,
       gain: g,
-      fadeIn: function(dur){ g.gain.setValueAtTime(Math.max(g.gain.value,0.0001), now()); g.gain.setTargetAtTime(0.9, now(), dur/4); },
+      fadeIn: function(dur){ g.gain.setValueAtTime(Math.max(g.gain.value,0.0001), now()); g.gain.setTargetAtTime(0.62, now(), dur/4); },
       fadeOut: function(dur, then){
         g.gain.setTargetAtTime(0.0001, now(), dur/4);
         setTimeout(function(){
