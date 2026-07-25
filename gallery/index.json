@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-07-25",
+    "seed": 20260725,
+    "title": "the bridge, and someone you love",
+    "mechanism": "interpose",
+    "causation": "means",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-07-24",
     "seed": 20260724,
     "title": "the loop, and the saboteur",
