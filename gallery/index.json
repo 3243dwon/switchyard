@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-08-01",
+    "seed": 20260801,
+    "title": "the saboteur, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
     "date": "2026-07-31",
     "seed": 20260731,
     "title": "the one who chose the risk, on the side track",
