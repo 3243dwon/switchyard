@@ -1,6 +1,14 @@
 # Switchyard — daily dilemma gallery
 
-One algorithmically-composed moral dilemma a day, rendered by the [engine](../). Each is seeded by its date, so every frame is reproducible. 52 dilemmas and counting.
+One algorithmically-composed moral dilemma a day, rendered by the [engine](../). Each is seeded by its date, so every frame is reproducible. 53 dilemmas and counting.
+
+---
+
+### 2026-08-09 — *a lone stranger, on the side track*
+
+<img src="2026-08-09.risograph.svg" width="420" alt="a lone stranger, on the side track, risograph"> <img src="2026-08-09.inkwash.svg" width="280" alt="a lone stranger, on the side track, ink wash">
+
+`reroute` · `side_effect` · **unanimous** · E[deaths]=1 — also [editorial](2026-08-09.editorial.svg) · [animated](2026-08-09.animated.svg) · [hero prompt](2026-08-09.prompt.txt) · `node scripts/gallery.ts 2026-08-09`
 
 ---
 
