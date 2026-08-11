@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-08-11",
+    "seed": 20260811,
+    "title": "the saboteur, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
     "date": "2026-08-10",
     "seed": 20260810,
     "title": "a lone stranger, on the side track",
