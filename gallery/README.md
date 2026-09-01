@@ -1,6 +1,14 @@
 # Switchyard — daily dilemma gallery
 
-One algorithmically-composed moral dilemma a day, rendered by the [engine](../). Each is seeded by its date, so every frame is reproducible. 75 dilemmas and counting.
+One algorithmically-composed moral dilemma a day, rendered by the [engine](../). Each is seeded by its date, so every frame is reproducible. 76 dilemmas and counting.
+
+---
+
+### 2026-09-01 — *the bridge, and the saboteur*
+
+<img src="2026-09-01.risograph.svg" width="420" alt="the bridge, and the saboteur, risograph"> <img src="2026-09-01.inkwash.svg" width="280" alt="the bridge, and the saboteur, ink wash">
+
+`interpose` · `means` · **contested** · E[deaths]=1 — also [editorial](2026-09-01.editorial.svg) · [animated](2026-09-01.animated.svg) · [hero prompt](2026-09-01.prompt.txt) · `node scripts/gallery.ts 2026-09-01`
 
 ---
 
