@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-15",
+    "seed": 20260915,
+    "title": "the saboteur, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-09-14",
     "seed": 20260914,
     "title": "the one who consented, on the side track",
