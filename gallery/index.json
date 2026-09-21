@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-21",
+    "seed": 20260921,
+    "title": "the one who chose the risk, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "unanimous"
+  },
+  {
     "date": "2026-09-20",
     "seed": 20260920,
     "title": "the bridge, and the one who consented",
