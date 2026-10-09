@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-09",
+    "seed": 20261009,
+    "title": "the one who chose the risk, on the side track",
+    "mechanism": "reroute",
+    "causation": "side_effect",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-10-08",
     "seed": 20261008,
     "title": "a lone stranger, on the side track",
