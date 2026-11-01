@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-01",
+    "seed": 20261101,
+    "title": "the bridge, and the saboteur",
+    "mechanism": "interpose",
+    "causation": "means",
+    "ed": 1,
+    "split": "contested"
+  },
+  {
     "date": "2026-10-31",
     "seed": 20261031,
     "title": "the saboteur, on the side track",
